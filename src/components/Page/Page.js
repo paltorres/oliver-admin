@@ -15,19 +15,20 @@ import s from './Page.css';
 class Page extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    html: PropTypes.string.isRequired,
+    html: PropTypes.string,
   };
 
   render() {
-    const { title, html } = this.props;
+    const { title, html, children } = this.props;
     return (
       <div className={s.root}>
         <div className={s.container}>
           <h1>{title}</h1>
-          <div
+          {html && <div
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
-          />
+          />}
+          {children}
         </div>
       </div>
     );

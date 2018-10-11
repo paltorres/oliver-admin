@@ -10,15 +10,17 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Page from '../../components/Page';
-import privacy from './privacy.md';
+import alsoNotMatterToo from './also-not-matter-too.md';
 
 function action() {
   return {
-    chunks: ['privacy'],
-    title: privacy.title,
+    chunks: ['also-not-matter-too'],
+    title: alsoNotMatterToo.title,
     component: (
       <Layout>
-        <Page {...privacy} />
+        <Page {...alsoNotMatterToo}>
+          <img src="https://cdn.memegenerator.es/imagenes/memes/full/28/20/28204977.jpg" />
+        </Page>
       </Layout>
     ),
   };

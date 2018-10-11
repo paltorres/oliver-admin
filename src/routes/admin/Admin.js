@@ -10,6 +10,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+
+import AdminConfirmation from '../../components/AdminConfirmation';
+
 import s from './Admin.css';
 
 class Admin extends React.Component {
@@ -22,7 +25,8 @@ class Admin extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>{this.props.title}</h1>
-          <p>...</p>
+          <p>Sección solo para admins.</p>
+          <AdminConfirmation />
         </div>
       </div>
     );

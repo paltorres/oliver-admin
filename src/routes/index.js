@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-/* eslint-disable global-require */
+ /* eslint-disable global-require */
 
 // The top-level (parent) route
 const routes = {
@@ -20,10 +20,6 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
-      path: '/contact',
-      load: () => import(/* webpackChunkName: 'contact' */ './contact'),
-    },
-    {
       path: '/login',
       load: () => import(/* webpackChunkName: 'login' */ './login'),
     },
@@ -32,16 +28,28 @@ const routes = {
       load: () => import(/* webpackChunkName: 'register' */ './register'),
     },
     {
-      path: '/about',
-      load: () => import(/* webpackChunkName: 'about' */ './about'),
-    },
-    {
-      path: '/privacy',
-      load: () => import(/* webpackChunkName: 'privacy' */ './privacy'),
-    },
-    {
       path: '/admin',
       load: () => import(/* webpackChunkName: 'admin' */ './admin'),
+    },
+    {
+      path: '/content/not-matter',
+      load: () => import(/* webpackChunkName: 'not-matter' */ './not-matter'),
+    },
+    {
+      path: '/content/not-matter-too',
+      load: () => import(/* webpackChunkName: 'not-matter-too' */ './not-matter-too'),
+    },
+    {
+      path: '/content/also-not-matter-too',
+      load: () => import(/* webpackChunkName: 'also-not-matter-too' */ './also-not-matter-too'),
+    },
+    {
+      path: '/admin/sales',
+      load: () => import(/* webpackChunkName: 'admin-sales' */ './admin/sections/sales'),
+    },
+    {
+      path: '/admin/sales/claims/:claimId',
+      load: () => import(/* webpackChunkName: 'admin-claims' */ './admin/sections/claims'),
     },
 
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)

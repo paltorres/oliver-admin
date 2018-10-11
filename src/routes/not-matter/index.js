@@ -10,15 +10,15 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Page from '../../components/Page';
-import about from './about.md';
+import notMatter from './not-matter.md';
 
 function action() {
   return {
-    chunks: ['about'],
-    title: about.title,
+    chunks: ['not-matter'],
+    title: notMatter.title,
     component: (
       <Layout>
-        <Page {...about} />
+        <Page {...notMatter} />
       </Layout>
     ),
   };
