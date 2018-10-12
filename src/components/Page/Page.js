@@ -24,10 +24,12 @@ class Page extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>{title}</h1>
-          {html && <div
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: html }}
-          />}
+          {html && (
+            <div
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          )}
           {children}
         </div>
       </div>

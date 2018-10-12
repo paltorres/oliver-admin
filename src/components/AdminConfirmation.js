@@ -12,22 +12,29 @@ import React from 'react';
 class AdminConfirm extends React.Component {
   state = {
     isAdmin: false,
-  }
+  };
 
-  adminChecker = (e) => {
+  adminChecker = e => {
     const isAdmin = e.target.checked;
 
     this.setState({
-      isAdmin: isAdmin,
+      isAdmin,
     });
-  }
+  };
 
   render() {
     return (
       <form>
         <div className="form-group form-check">
-          <input type="checkbox" className="form-check-input" id="admin-check" onChange={this.adminChecker} />
-          <label className="form-check-label" htmlFor="admin-check">Eres admin?</label>
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id="admin-check"
+            onChange={this.adminChecker}
+          />
+          <label className="form-check-label" htmlFor="admin-check">
+            Eres admin?
+          </label>
         </div>
         {this.state.isAdmin && <a href="/admin/sales">Admin de ventas</a>}
       </form>

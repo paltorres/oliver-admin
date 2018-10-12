@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
- /* eslint-disable global-require */
+/* eslint-disable global-require */
 
 // The top-level (parent) route
 const routes = {
@@ -37,19 +37,23 @@ const routes = {
     },
     {
       path: '/content/not-matter-too',
-      load: () => import(/* webpackChunkName: 'not-matter-too' */ './not-matter-too'),
+      load: () =>
+        import(/* webpackChunkName: 'not-matter-too' */ './not-matter-too'),
     },
     {
       path: '/content/also-not-matter-too',
-      load: () => import(/* webpackChunkName: 'also-not-matter-too' */ './also-not-matter-too'),
+      load: () =>
+        import(/* webpackChunkName: 'also-not-matter-too' */ './also-not-matter-too'),
     },
     {
       path: '/admin/sales',
-      load: () => import(/* webpackChunkName: 'admin-sales' */ './admin/sections/sales'),
+      load: () =>
+        import(/* webpackChunkName: 'admin-sales' */ './admin/sections/sales'),
     },
     {
       path: '/admin/sales/claims/:claimId',
-      load: () => import(/* webpackChunkName: 'admin-claims' */ './admin/sections/claims'),
+      load: () =>
+        import(/* webpackChunkName: 'admin-claims' */ './admin/sections/claims'),
     },
 
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)

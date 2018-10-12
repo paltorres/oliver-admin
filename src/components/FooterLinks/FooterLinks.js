@@ -13,7 +13,10 @@ class FooterLinks extends React.Component {
             Mercadolibre
           </a>
           <span className={s.spacer}>|</span>
-          <a className={s.link} href="https://github.com/paltorres/oliver-admin">
+          <a
+            className={s.link}
+            href="https://github.com/paltorres/oliver-admin"
+          >
             Github Repo
           </a>
         </div>
